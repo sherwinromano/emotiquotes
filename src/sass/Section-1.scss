@@ -70,6 +70,7 @@ section:nth-of-type(1) {
       }
 
       .dropdown-content {
+        z-index: 99;
         background-color: $bg-white;
         position: absolute;
         width: 100%;
@@ -136,5 +137,116 @@ section:nth-of-type(1) {
     .visible {
       visibility: visible;
     }
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  section:nth-of-type(1) {
+    align-self: flex-start;
+    height: auto;
+    gap: 1.5rem;
+
+    .title-section {
+      h1 {
+        font-size: 2.8rem;
+        text-align: start;
+      }
+      p {
+        font-size: 1.4rem;
+        width: 80%;
+        text-align: start;
+      }
+    }
+
+    .input-section {
+      .dropdown {
+        .dropdown-header {
+          padding: 10px;
+
+          .select-result {
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+        .dropdown-content {
+          ul {
+            li {
+              padding: 10px;
+            }
+            span {
+              font-size: 1rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      button {
+        margin-top: 12px;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  section:nth-of-type(1).section-centered {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  section:nth-of-type(1) {
+    height: auto;
+    gap: 1.5rem;
+
+    .title-section {
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      p {
+        font-size: 1.3rem;
+        width: auto;
+        text-align: center;
+      }
+    }
+
+    .input-section {
+      .dropdown {
+        .dropdown-header {
+          padding: 10px;
+
+          .select-result {
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+        .dropdown-content {
+          ul {
+            li {
+              padding: 10px;
+            }
+            span {
+              font-size: 1rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      button {
+        margin-top: 12px;
+        align-self: center;
+      }
+    }
+  }
+
+  section:nth-of-type(1).section-centered {
+    gap: 3rem;
   }
 }
