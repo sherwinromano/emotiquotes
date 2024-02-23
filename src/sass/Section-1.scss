@@ -160,6 +160,7 @@ section:nth-of-type(1) {
 
     .input-section {
       .dropdown {
+        width: 75%;
         .dropdown-header {
           padding: 10px;
 
@@ -185,6 +186,7 @@ section:nth-of-type(1) {
       }
 
       button {
+        width: 40%;
         margin-top: 12px;
         align-self: flex-start;
       }

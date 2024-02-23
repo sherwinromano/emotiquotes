@@ -47,7 +47,7 @@ function App() {
           <section className={result == false ? "section-centered" : null}>
             <div className="title-section">
               <h1>Emotiquotes</h1>
-              <p>Your daily dose of quotes based on your mood</p>
+              <p>Whatever your mood is, there's a quote behind it</p>
             </div>
             <div className="input-section">
               <Dropdown
@@ -147,6 +147,9 @@ const Dropdown = ({
 };
 
 const QouteSection = ({ result }) => {
+  const quoteLength = String(result.quote).split(" ").length;
+  const windowHeight = window.innerHeight;
+
   return result.quote == undefined && result.author == undefined ? null : (
     <section>
       <div className="quote-wrapper">
@@ -178,7 +181,17 @@ const QouteSection = ({ result }) => {
           </svg>
         </span>
       </div>
-      <p className="author">{result.author}</p>
+      <p
+        className={
+          windowHeight == 667
+            ? quoteLength >= 44
+              ? "author text-white"
+              : "author"
+            : "author"
+        }
+      >
+        {result.author}
+      </p>
     </section>
   );
 };
